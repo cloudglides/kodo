@@ -11,7 +11,8 @@ export default {
       colors: {
         primary: '#131513',
         secondary: '#0b0d0b',
-        'text-muted': '#9CA49C',
+        'text-muted': '#929992',
+        'text-normal': '#f6fff5',
         coral: {
           50: '#fef6f4',
           100: '#fde9e4',

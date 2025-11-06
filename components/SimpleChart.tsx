@@ -9,7 +9,7 @@ export function SimpleChart({ data }: SimpleChartProps) {
   
   return (
     <div className="bg-primary border border-[#1a1c1a] rounded-lg p-6">
-      <h3 className="text-[10px] font-medium text-text-muted uppercase tracking-wider mb-6" style={{ lineHeight: '10px' }}>Activity</h3>
+      <h3 className="text-[10px] font-medium text-[#929992] uppercase tracking-wider mb-6" style={{ lineHeight: '10px' }}>Activity</h3>
       
       <div className="flex items-end justify-between gap-3 h-40">
         {data.map((item, index) => {
@@ -25,11 +25,11 @@ export function SimpleChart({ data }: SimpleChartProps) {
                     minHeight: '4px'
                   }}
                 />
-                <div className="absolute -top-10 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity bg-[#0b0d0b] text-white text-[10px] font-medium px-2 py-1.5 rounded border border-[#1a1c1a] whitespace-nowrap" style={{ lineHeight: '10px' }}>
+                <div className="absolute -top-10 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity bg-[#0b0d0b] text-[#f6fff5] text-[10px] font-medium px-2 py-1.5 rounded border border-[#1a1c1a] whitespace-nowrap" style={{ lineHeight: '10px' }}>
                   {item.hours.toFixed(1)}h
                 </div>
               </div>
-              <span className="text-[10px] font-medium text-text-muted" style={{ lineHeight: '10px' }}>{item.day}</span>
+              <span className="text-[10px] font-medium text-[#929992]" style={{ lineHeight: '10px' }}>{item.day}</span>
             </div>
           );
         })}

@@ -86,10 +86,10 @@ export default function Dashboard() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-secondary flex items-center justify-center">
+      <div className="min-h-screen bg-[#0b0d0b] flex items-center justify-center">
         <div className="flex items-center gap-3">
           <Activity className="w-5 h-5 text-[#DE7356] animate-pulse" />
-          <span className="text-[10px] font-medium text-text-muted" style={{ lineHeight: '10px' }}>Loading...</span>
+          <span className="text-[10px] font-medium text-[#929992]" style={{ lineHeight: '10px' }}>Loading...</span>
         </div>
       </div>
     );
@@ -97,9 +97,9 @@ export default function Dashboard() {
 
   if (error || !stats) {
     return (
-      <div className="min-h-screen bg-secondary flex items-center justify-center p-4">
+      <div className="min-h-screen bg-[#0b0d0b] flex items-center justify-center p-4">
         <div className="text-center max-w-sm bg-primary border border-[#1a1c1a] rounded-lg p-6">
-          <p className="text-sm text-gray-300 mb-4">Unable to load data</p>
+          <p className="text-sm text-[#f6fff5] mb-4">Unable to load data</p>
           <button 
             onClick={handleSettings}
             className="text-sm text-[#DE7356] hover:text-[#f3937f] font-medium"
@@ -122,20 +122,20 @@ export default function Dashboard() {
   const avgHours = parseFloat((data.daily_average / 3600).toFixed(1));
 
   return (
-    <div className="min-h-screen bg-secondary">
+    <div className="min-h-screen bg-[#0b0d0b]">
       {/* Main Content */}
       <div className="max-w-6xl mx-auto px-6 py-12">
         {/* Header */}
         <div className="flex items-center justify-between mb-12">
           <div>
-            <h1 className="text-3xl font-medium text-white mb-2">Dashboard</h1>
-            <p className="text-[10px] font-medium text-text-muted" style={{ lineHeight: '10px' }}>Last 7 days of coding activity</p>
+            <h1 className="text-3xl font-medium text-[#f6fff5] mb-2">Dashboard</h1>
+            <p className="text-[10px] font-medium text-[#929992]" style={{ lineHeight: '10px' }}>Last 7 days of coding activity</p>
           </div>
           <button 
             onClick={handleSettings}
             className="p-2.5 hover:bg-primary rounded-lg transition-colors border border-[#1a1c1a]"
           >
-            <Settings className="w-4 h-4 text-text-muted" />
+            <Settings className="w-4 h-4 text-[#929992]" />
           </button>
         </div>
 
@@ -178,9 +178,9 @@ export default function Dashboard() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <EditorsList editors={data.editors || []} />
           <div className="bg-primary border border-[#1a1c1a] rounded-lg p-6">
-            <h3 className="text-[10px] font-medium text-text-muted uppercase tracking-wider mb-3" style={{ lineHeight: '10px' }}>Total</h3>
-            <div className="text-3xl font-medium text-white mb-2">{data.human_readable_total}</div>
-            <p className="text-[10px] font-medium text-text-muted" style={{ lineHeight: '10px' }}>coded in the last 7 days</p>
+            <h3 className="text-[10px] font-medium text-[#929992] uppercase tracking-wider mb-3" style={{ lineHeight: '10px' }}>Total</h3>
+            <div className="text-3xl font-medium text-[#f6fff5] mb-2">{data.human_readable_total}</div>
+            <p className="text-[10px] font-medium text-[#929992]" style={{ lineHeight: '10px' }}>coded in the last 7 days</p>
           </div>
         </div>
       </div>
